@@ -16,20 +16,29 @@ const game = {
       { name: "pokeball", quantity: 8 },
       { name: "rare candy", quantity: 99 },
     ],
-  }
+    catchPokemon: function(pokemonObj) {
+        this.party.push(pokemonObj);
+    }
+};
 
-/*
-Exercise 9
-1. Can you print out all the starter Pokémon from the `pokemon` array?
-2. Think about how you can identify a starter Pokémon and then log their names.
+  /*
+Exercise 10
+1. Add a method called `catchPokemon` to the `game` object. This method should:
+  - Accept an object as a parameter called `pokemonObj`
+  - Add the `pokemonObj` to the `game.party` array.
+  - not return anything
 
-Solve Exercise 9 here:
+After writing this method, call it and pass in a Pokemon object of your choice from the `pokemon` data to catch it.
+
+Solve Exercise 10 here:
 */
 
-const starterPokemons = pokemon.filter(pokemon => pokemon.starter);
-starterPokemons.forEach(pokemon => {
-    console.log(pokemon.name);
-});
+//used ChatGPT
+const pokemonToCatch = pokemon.find(p => p.name === "Bulbasaur");
+
+game.catchPokemon(pokemonToCatch);
+
+console.log("Updated party:", game.party);
 
 
 
