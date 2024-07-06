@@ -19,15 +19,19 @@ const game = {
   }
   
 /*
-Exercise 4
-1. Select a starter Pokémon from the `pokemon` array. Remember, a starter Pokémon's `starter` property is true.
-2. Add this Pokémon to the `game.party` array. Which array method will you use to add them?
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
 
 
-Solve Exercise 4 here:
+Solve Exercise 5 here:
 */
 
-const starterPokemon = pokemon.find(p => p.starter);
-game.party.push(starterPokemon);
+const grassPokemons = pokemon.filter(p => p.type === "grass");
+const selectedPokemons = grassPokemons.slice(0, 3); 
+game.party.push(...selectedPokemons);
+
 console.log(game);
+
+
 
