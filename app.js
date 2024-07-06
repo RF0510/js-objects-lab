@@ -19,17 +19,17 @@ const game = {
   }
 
 /*
-Exercise 8
-1. Print the name of each Pokémon in your party.
-2. Consider using a loop or an array method to access each Pokémon's name.
+Exercise 9
+1. Can you print out all the starter Pokémon from the `pokemon` array?
+2. Think about how you can identify a starter Pokémon and then log their names.
 
-Solve Exercise 8 here:
+Solve Exercise 9 here:
 */
 
-game.party.forEach(pokemon => {
+const starterPokemons = pokemon.filter(pokemon => pokemon.starter);
+starterPokemons.forEach(pokemon => {
     console.log(pokemon.name);
 });
-
 
 
 
