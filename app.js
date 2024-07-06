@@ -18,15 +18,15 @@ const game = {
     ],
   }
   
-  function findPokemonName(number) {
-    for (let i = 0; i < pokemon.length; i++) {
-        if (pokemon[i].number === number) {
-            return pokemon[i].name;
-        }
-    }
-    return null; 
-}
-const pokemonNumber = 59;
-const pokemonName = findPokemonName(pokemonNumber);
+  /*
+Exercise 3
+1. Add a new property to the `game` object. Let's call it "difficulty".
+2. Choose a value for "difficulty" that you think fits the game. Ex: "Easy", "Med" or "Hard". How would you assign it?
 
-  console.log(pokemonName)
+
+Solve Exercise 3 here:
+*/
+
+
+game.difficulty = "Easy";
+console.log(game);
