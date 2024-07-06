@@ -19,19 +19,15 @@ const game = {
   }
   
 /*
-Exercise 5
-1. Choose three more Pokémon from the `pokemon` array and add them to your party.
-2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
-
-
-Solve Exercise 5 here:
+1. Set the `completed` property to true for gyms with a difficulty below 3.
+2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
 */
 
-const grassPokemons = pokemon.filter(p => p.type === "grass");
-const selectedPokemons = grassPokemons.slice(0, 3); 
-game.party.push(...selectedPokemons);
+game.gyms.forEach(gym => {
+    if (gym.difficulty < 3) {
+        gym.completed = true;
+    }
+});
 
 console.log(game);
-
-
 
